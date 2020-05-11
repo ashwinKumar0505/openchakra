@@ -91,9 +91,22 @@ interface IComponent {
   props: any
   rootParentType?: ComponentType
 }
+interface ICustomComponent {
+  children: string[]
+  type: ComponentType
+  parent: string
+  id: string
+  props: any
+  rootParentType?: ComponentType
+  name: string
+}
 
 interface IComponents {
   [name: string]: IComponent
+}
+
+interface ICustomComponents {
+  [name: string]: ICustomComponent
 }
 
 interface IPreviewProps {
@@ -109,4 +122,5 @@ interface ComponentItemProps {
   isMeta?: boolean
   soon?: boolean
   rootParentType?: ComponentType
+  custom?: boolean
 }
