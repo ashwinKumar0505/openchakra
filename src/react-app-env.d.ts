@@ -91,12 +91,12 @@ interface IComponent {
   props: any
   rootParentType?: ComponentType
   name?: string
+  customComponentId?: string
 }
 
 interface IComponents {
   [name: string]: IComponent
 }
-
 
 interface IPreviewProps {
   component: IComponent
